@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4a8cef6a585df49b9989c533e1aa06, type: 3}
+  m_Name: Crawler
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.UnitDef
+  displayName: Reptante
+  team: 1
+  maxHP: 10
+  armor: 0
+  dodge: 16
+  speed: 8
+  corrResist: 0
+  maxAmmo: 0
+  countsForCohesion: 0
+  weakToFire: 1
+  isLeader: 0
+  resBleed: 0
+  resToxin: 0
+  resStun: 0
+  resMove: 0
+  resDebuff: 0
+  deathBlowPct: 33
+  threat: 2
+  usesPromethium: 0
+  isBoss: 0
+  isElite: 0
+  ownCohesion: 0
+  phaseTwoAtPct: 0
+  phaseThreeAtPct: 0
+  phaseTwoLog: 
+  phaseThreeLog: 
+  phaseThreeSummon: 
+  summonType: 
+  summonPerRound: 0
+  summonFromNest: 0
+  dropsMoraleOnDeath: 0
+  isBomber: 0
+  isVip: 0
+  threatChannel: 1
+  devoursCorpses: 0
+  corpseHeal: 8
+  gasOnHit: 0
+  gasOnDeath: 0
+  splitsInto: 
+  extraActionIfUnhit: 0
+  isSapper: 0
+  packLeader: 0
+  isFlayer: 0
+  isDescendido: 0
+  silencesMiracles: 0
+  revivesDescendidos: 0
+  isAutomaton: 0
+  isFauna: 0
+  weakToArea: 0
+  bleedsAttackerOnMelee: 0
+  stealsSupply: 0
+  abilities:
+  - {fileID: 6092476192742201904}
+--- !u!114 &6092476192742201904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714f9c99ade1609468b2663157e9b976, type: 3}
+  m_Name: Mordisco reptante
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.AbilityDef
+  displayName: Mordisco reptante
+  usableFrom: 01000000020000000300000004000000
+  targetPos: 01000000020000000300000004000000
+  targetKind: 0
+  area: 0
+  accuracy: 82
+  dmgMin: 3
+  dmgMax: 6
+  critPct: 8
+  healMin: 0
+  healMax: 0
+  corruptionDelta: 0
+  faithDelta: 0
+  selfFaithDelta: 0
+  isFaithAbility: 0
+  status:
+    kind: 1
+    chance: 40
+    power: 2
+    duration: 2
+  removesBleed: 0
+  ammoCost: 0
+  usesPerCombat: 0
+  requiresMelee: 0
+  blockedInMelee: 0
+  special: 0
+  faithCost: 0
+  warpDanger: 0
+  ignoresArmor: 0
+  isFire: 0
+  cohesionDelta: 0
+  pushesBack: 0
+  bossPhaseOnly: 0
+  areaCorruption: 0
+  ralliesMoral: 0

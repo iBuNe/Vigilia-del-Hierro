@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8046d1f1052a1994cbc3898e174cad3a, type: 3}
+  m_Name: RevolverRepeticion
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.GearDef
+  displayName: "Rev\xF3lver de repetici\xF3n"
+  slot: 0
+  dmgBonus: 1
+  accBonus: 0
+  dodgeBonus: 0
+  speedBonus: 1
+  armorBonus: 0
+  hpBonus: 0
+  manchaResBonus: 0
+  critBonus: 0
+  price: 300
+  flavor: "Ligero y r\xE1pido en el cinto del oficial."

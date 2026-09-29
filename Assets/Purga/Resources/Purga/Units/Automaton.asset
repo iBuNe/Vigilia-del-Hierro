@@ -1,0 +1,306 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9081642475548646204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714f9c99ade1609468b2663157e9b976, type: 3}
+  m_Name: Anclar
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.AbilityDef
+  displayName: Anclar
+  usableFrom: 01000000020000000300000004000000
+  targetPos: 01000000020000000300000004000000
+  targetKind: 2
+  area: 0
+  accuracy: 0
+  dmgMin: 0
+  dmgMax: 0
+  critPct: 0
+  healMin: 0
+  healMax: 0
+  corruptionDelta: 0
+  faithDelta: 0
+  selfFaithDelta: 0
+  isFaithAbility: 0
+  status:
+    kind: 0
+    chance: 100
+    power: 0
+    duration: 0
+  removesBleed: 0
+  ammoCost: 0
+  usesPerCombat: 0
+  requiresMelee: 0
+  blockedInMelee: 0
+  special: 2
+  faithCost: 0
+  warpDanger: 0
+  ignoresArmor: 0
+  isFire: 0
+  cohesionDelta: 0
+  pushesBack: 0
+  bossPhaseOnly: 0
+  areaCorruption: 0
+  ralliesMoral: 0
+--- !u!114 &-5601626442646786612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714f9c99ade1609468b2663157e9b976, type: 3}
+  m_Name: Blindar
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.AbilityDef
+  displayName: Blindar
+  usableFrom: 01000000020000000300000004000000
+  targetPos: 01000000020000000300000004000000
+  targetKind: 2
+  area: 0
+  accuracy: 0
+  dmgMin: 0
+  dmgMax: 0
+  critPct: 0
+  healMin: 0
+  healMax: 0
+  corruptionDelta: 0
+  faithDelta: 0
+  selfFaithDelta: 0
+  isFaithAbility: 0
+  status:
+    kind: 17
+    chance: 100
+    power: 3
+    duration: 2
+  removesBleed: 0
+  ammoCost: 0
+  usesPerCombat: 0
+  requiresMelee: 0
+  blockedInMelee: 0
+  special: 0
+  faithCost: 0
+  warpDanger: 0
+  ignoresArmor: 0
+  isFire: 0
+  cohesionDelta: 0
+  pushesBack: 0
+  bossPhaseOnly: 0
+  areaCorruption: 0
+  ralliesMoral: 0
+--- !u!114 &-5533531892913900544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714f9c99ade1609468b2663157e9b976, type: 3}
+  m_Name: Descarga de vapor
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.AbilityDef
+  displayName: Descarga de vapor
+  usableFrom: 010000000200000003000000
+  targetPos: 0100000002000000
+  targetKind: 0
+  area: 1
+  accuracy: 80
+  dmgMin: 4
+  dmgMax: 7
+  critPct: 0
+  healMin: 0
+  healMax: 0
+  corruptionDelta: 0
+  faithDelta: 0
+  selfFaithDelta: 0
+  isFaithAbility: 0
+  status:
+    kind: 0
+    chance: 100
+    power: 0
+    duration: 0
+  removesBleed: 0
+  ammoCost: 0
+  usesPerCombat: 1
+  requiresMelee: 0
+  blockedInMelee: 0
+  special: 0
+  faithCost: 0
+  warpDanger: 0
+  ignoresArmor: 0
+  isFire: 0
+  cohesionDelta: 0
+  pushesBack: 0
+  bossPhaseOnly: 0
+  areaCorruption: 0
+  ralliesMoral: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4a8cef6a585df49b9989c533e1aa06, type: 3}
+  m_Name: Automaton
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.UnitDef
+  displayName: "Aut\xF3mata"
+  team: 0
+  maxHP: 30
+  armor: 3
+  dodge: 4
+  speed: 3
+  corrResist: 100
+  maxAmmo: 0
+  countsForCohesion: 1
+  weakToFire: 0
+  isLeader: 0
+  resBleed: 0
+  resToxin: 0
+  resStun: 0
+  resMove: 0
+  resDebuff: 0
+  deathBlowPct: 33
+  threat: 1
+  usesPromethium: 0
+  isBoss: 0
+  isElite: 0
+  ownCohesion: 0
+  phaseTwoAtPct: 0
+  phaseThreeAtPct: 0
+  phaseTwoLog: 
+  phaseThreeLog: 
+  phaseThreeSummon: 
+  summonType: 
+  summonPerRound: 0
+  summonFromNest: 0
+  dropsMoraleOnDeath: 0
+  isBomber: 0
+  isVip: 0
+  threatChannel: 0
+  devoursCorpses: 0
+  corpseHeal: 8
+  gasOnHit: 0
+  gasOnDeath: 0
+  splitsInto: 
+  extraActionIfUnhit: 0
+  isSapper: 0
+  packLeader: 0
+  isFlayer: 0
+  isDescendido: 0
+  silencesMiracles: 0
+  revivesDescendidos: 0
+  isAutomaton: 1
+  isFauna: 0
+  weakToArea: 0
+  bleedsAttackerOnMelee: 0
+  stealsSupply: 0
+  abilities:
+  - {fileID: 6058623578210620871}
+  - {fileID: 6499494884806931728}
+  - {fileID: -5533531892913900544}
+  - {fileID: -5601626442646786612}
+  - {fileID: -9081642475548646204}
+--- !u!114 &6058623578210620871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714f9c99ade1609468b2663157e9b976, type: 3}
+  m_Name: "Pu\xF1o hidr\xE1ulico"
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.AbilityDef
+  displayName: "Pu\xF1o hidr\xE1ulico"
+  usableFrom: 0100000002000000
+  targetPos: 0100000002000000
+  targetKind: 0
+  area: 0
+  accuracy: 90
+  dmgMin: 8
+  dmgMax: 13
+  critPct: 6
+  healMin: 0
+  healMax: 0
+  corruptionDelta: 0
+  faithDelta: 0
+  selfFaithDelta: 0
+  isFaithAbility: 0
+  status:
+    kind: 0
+    chance: 100
+    power: 0
+    duration: 0
+  removesBleed: 0
+  ammoCost: 0
+  usesPerCombat: 0
+  requiresMelee: 0
+  blockedInMelee: 0
+  special: 0
+  faithCost: 0
+  warpDanger: 0
+  ignoresArmor: 0
+  isFire: 0
+  cohesionDelta: 0
+  pushesBack: 0
+  bossPhaseOnly: 0
+  areaCorruption: 0
+  ralliesMoral: 0
+--- !u!114 &6499494884806931728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714f9c99ade1609468b2663157e9b976, type: 3}
+  m_Name: Ariete
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.AbilityDef
+  displayName: Ariete
+  usableFrom: 0100000002000000
+  targetPos: 010000000200000003000000
+  targetKind: 0
+  area: 0
+  accuracy: 85
+  dmgMin: 5
+  dmgMax: 9
+  critPct: 5
+  healMin: 0
+  healMax: 0
+  corruptionDelta: 0
+  faithDelta: 0
+  selfFaithDelta: 0
+  isFaithAbility: 0
+  status:
+    kind: 3
+    chance: 70
+    power: 0
+    duration: 1
+  removesBleed: 0
+  ammoCost: 0
+  usesPerCombat: 2
+  requiresMelee: 0
+  blockedInMelee: 0
+  special: 0
+  faithCost: 0
+  warpDanger: 0
+  ignoresArmor: 0
+  isFire: 0
+  cohesionDelta: 0
+  pushesBack: 0
+  bossPhaseOnly: 0
+  areaCorruption: 0
+  ralliesMoral: 0

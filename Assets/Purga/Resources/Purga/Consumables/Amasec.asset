@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bc9a962f3377374ea923f5d1141a5e2, type: 3}
+  m_Name: Amasec
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.ConsumableDef
+  displayName: aguardiente de trinchera
+  price: 45
+  corruptionDelta: -10
+  removesToxin: 0
+  toxinImmuneRounds: 0
+  removesQuebranto: 0
+  endCombatCorruption: 0
+  affectsGroup: 0
+  status:
+    kind: 4
+    chance: 100
+    power: 5
+    duration: 2
+  statusOnExpire:
+    kind: 0
+    chance: 100
+    power: 0
+    duration: 0

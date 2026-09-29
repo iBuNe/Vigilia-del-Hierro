@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb1a275b4800fb49ab640d9a481b74b, type: 3}
+  m_Name: Baliza
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.ItemDef
+  displayName: "Repetidor de se\xF1al"
+  price: 120
+  charges: 1
+  kind: 10
+  power: 0
+  description: "+2 niveles de Se\xF1al con el Fort\xEDn al desplegarlo (m\xE1s seguro,
+    evac, menos bot\xEDn)."

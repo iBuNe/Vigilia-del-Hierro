@@ -1,0 +1,183 @@
+/* LA VIGILIA DE HIERRO — tema de combate (UI Toolkit, provisional del Hito 9).
+   TODO el aspecto vive aquí. El artista mete su pixel-art como background-image en
+   .figure / .portrait y los iconos, sin tocar el C#. */
+
+.combat-root {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background-color: rgb(9, 8, 7);
+    flex-direction: column;
+}
+
+/* ================= barra superior ================= */
+.topbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 12px 22px 10px 22px;
+    background-color: rgb(14, 12, 10);
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(52, 44, 34);
+}
+.top-left { flex-direction: column; }
+.hdr-node { color: rgb(214, 198, 168); -unity-font-style: bold; font-size: 17px; letter-spacing: 3px; }
+
+/* icono de torre de comunicaciones (rects apilados + emisor) + % (sin la palabra SEÑAL) */
+.signal-row { flex-direction: row; align-items: flex-end; margin-top: 6px; }
+.signal-tower { flex-direction: column; align-items: center; justify-content: flex-end; margin-right: 8px; }
+.st-emit { width: 4px; height: 4px; border-radius: 2px; background-color: rgb(150, 200, 235); margin-bottom: 2px; }
+.st-r1 { width: 3px; height: 3px; background-color: rgb(150, 200, 235); }
+.st-r2 { width: 8px; height: 3px; margin-top: 1px; background-color: rgb(150, 200, 235); }
+.st-r3 { width: 13px; height: 3px; margin-top: 1px; background-color: rgb(150, 200, 235); }
+.st-r4 { width: 18px; height: 3px; margin-top: 1px; background-color: rgb(150, 200, 235); }
+.signal-pct { color: rgb(150, 200, 235); font-size: 12px; }
+
+/* icono de bengala ROJA + BENGALA x/4 + medidor que mengua */
+.top-center { flex-direction: column; align-items: center; min-width: 220px; }
+.flare { position: relative; align-items: center; justify-content: flex-end; height: 22px; }
+.flare-glow { position: absolute; top: -3px; width: 20px; height: 20px; border-radius: 10px; background-color: rgba(235, 60, 45, 0.35); }
+.flare-tip { width: 7px; height: 9px; border-radius: 3px; background-color: rgb(240, 70, 55); }
+.flare-stick { width: 3px; height: 8px; background-color: rgb(185, 178, 168); }
+.bengala-label { color: rgb(236, 150, 120); font-size: 12px; letter-spacing: 2px; -unity-font-style: bold; margin-top: 2px; }
+.bengala-meter { margin-top: 3px; }
+.bmeter-track { width: 130px; height: 4px; background-color: rgb(44, 26, 24); }
+.bmeter-fill { height: 100%; background-color: rgb(226, 80, 64); }
+
+.top-right { flex-direction: column; align-items: flex-end; }
+.hdr-round { color: rgb(214, 198, 168); -unity-font-style: bold; font-size: 17px; letter-spacing: 3px; }
+.turno-row { flex-direction: row; align-items: center; margin-top: 6px; }
+.turno-caption { color: rgb(150, 140, 122); font-size: 11px; letter-spacing: 2px; margin-right: 8px; }
+.turno-tokens { flex-direction: row; }
+.turno-tok { width: 16px; height: 20px; margin-left: 4px; border-width: 1px; border-color: rgb(60, 52, 42); }
+.tok-hero { background-color: rgb(40, 52, 74); }
+.tok-enemy { background-color: rgb(74, 34, 34); }
+.tok-now { border-color: rgb(217, 176, 97); border-width: 2px; }
+
+/* ================= campo de batalla: dos rangos enfrentados bajo una luz roja ================= */
+.battlefield {
+    position: relative;
+    flex-direction: row;
+    flex-grow: 1;
+    align-items: flex-end;
+    padding: 18px 40px 30px 40px;
+    background-color: rgb(18, 15, 13);
+}
+.ground {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 32%;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-top-width: 1px; border-top-color: rgb(40, 33, 26);
+}
+.light-grad { position: absolute; left: 0; top: 0; right: 0; bottom: 0; flex-direction: row; }
+.grad-strip { flex-grow: 1; height: 100%; }
+
+.rank { flex-grow: 1; flex-direction: row; align-items: flex-end; justify-content: space-around; }
+.nomans { flex-grow: 0.3; }
+
+.axis-caption { position: absolute; left: 0; right: 0; bottom: 8px; flex-direction: row; justify-content: space-between; padding: 0 16px; }
+.axis-side { color: rgb(130, 146, 184); font-size: 10px; letter-spacing: 1px; }
+.axis-front { color: rgb(236, 150, 120); font-size: 10px; letter-spacing: 1px; }
+
+/* ---- figura de unidad: MISMO tamaño héroes y enemigos (marcador; sprite por background-image) ---- */
+.unit { flex-direction: column; align-items: center; margin: 0 6px; flex-shrink: 0; }
+.unit-dark { opacity: 0.5; }
+.unit-dead { opacity: 0.28; }
+.lightmark { font-size: 13px; margin-bottom: 2px; }
+.unit-lit .lightmark { color: rgb(244, 150, 118); }
+.unit-dark .lightmark { color: rgb(122, 142, 184); }
+
+.figure {
+    width: 78px; height: 122px;
+    flex-shrink: 0;
+    background-color: rgb(34, 30, 25);
+    border-width: 1px; border-color: rgb(58, 50, 40);
+    border-radius: 3px;
+    align-items: center; justify-content: center;
+}
+.unit-enemy .figure { background-color: rgb(40, 28, 26); border-color: rgb(74, 48, 44); }
+.unit-dark .figure { border-color: rgb(58, 74, 104); }
+.unit-active .figure { border-color: rgb(217, 176, 97); border-width: 2px; background-color: rgb(46, 38, 26); }
+.figure-initial { color: rgb(120, 110, 96); font-size: 26px; -unity-font-style: bold; }
+
+/* barra de vida continua */
+.hpbar {
+    width: 84px; height: 8px; margin-top: 8px;
+    background-color: rgb(38, 33, 27);
+    border-width: 1px; border-color: rgb(16, 13, 10);
+    flex-direction: row;
+}
+.hpfill { height: 100%; background-color: rgb(120, 180, 95); }
+.hpfill-enemy { background-color: rgb(200, 74, 62); }
+
+.token-row { flex-direction: row; margin-top: 5px; height: 18px; }
+.token { min-width: 16px; height: 16px; margin-right: 3px; padding: 0 2px; border-radius: 2px; align-items: center; justify-content: center; }
+.token-txt { font-size: 10px; -unity-font-style: bold; color: rgb(20, 18, 15); }
+.tok-bleed { background-color: rgb(190, 70, 60); }
+.tok-burn { background-color: rgb(225, 140, 55); }
+.tok-stun { background-color: rgb(220, 200, 90); }
+.tok-buff { background-color: rgb(120, 180, 120); }
+.tok-debuff { background-color: rgb(150, 110, 170); }
+
+/* ================= panel inferior ================= */
+.bottompanel {
+    flex-direction: row; align-items: center;
+    padding: 12px 22px;
+    background-color: rgb(13, 11, 9);
+    border-top-width: 1px; border-top-color: rgb(52, 44, 34);
+}
+.portrait {
+    width: 62px; height: 62px;
+    background-color: rgb(26, 22, 18);
+    border-width: 1px; border-color: rgb(80, 66, 44);
+    align-items: center; justify-content: center;
+    margin-right: 14px;
+}
+.portrait-initial { color: rgb(150, 130, 90); font-size: 26px; -unity-font-style: bold; }
+
+.hero-info { flex-direction: column; min-width: 240px; margin-right: 24px; }
+.hero-name { color: rgb(220, 210, 190); font-size: 16px; -unity-font-style: bold; letter-spacing: 1px; }
+.hero-stats { color: rgb(160, 152, 138); font-size: 11px; margin-top: 3px; }
+.mancha-label { color: rgb(184, 128, 204); font-size: 11px; margin-top: 6px; }
+.mancha-wrap { margin-top: 3px; }
+.mancha-track { width: 230px; height: 10px; background-color: rgb(38, 32, 28); border-width: 1px; border-color: rgb(16, 13, 10); }
+.mancha-fill { height: 100%; background-color: rgb(196, 158, 92); }
+
+.ability-area { flex-direction: column; align-items: center; flex-grow: 1; }
+.ability-head { flex-direction: row; align-items: center; }
+.ability-name { color: rgb(220, 210, 190); font-size: 14px; -unity-font-style: bold; letter-spacing: 1px; margin-right: 10px; }
+.ability-tags { color: rgb(170, 140, 200); font-size: 11px; letter-spacing: 2px; }
+.slots { flex-direction: row; margin-top: 8px; }
+.slot {
+    width: 52px; height: 52px; margin: 0 5px;
+    background-color: rgb(28, 24, 20);
+    border-width: 1px; border-color: rgb(64, 54, 42);
+    border-radius: 3px;
+    align-items: center; justify-content: center;
+}
+.slot-sel { border-color: rgb(217, 176, 97); border-width: 2px; background-color: rgb(40, 33, 22); }
+.slot-empty { opacity: 0.4; }
+.slot-glyph { color: rgb(150, 135, 110); font-size: 20px; }
+.slot-badge { position: absolute; top: 2px; right: 4px; color: rgb(200, 190, 170); font-size: 10px; }
+
+.actions { flex-direction: row; align-items: center; }
+.move-col { flex-direction: column; margin-right: 12px; }
+.act {
+    color: rgb(210, 200, 182); font-size: 12px; letter-spacing: 1px;
+    background-color: rgb(30, 26, 21);
+    border-width: 1px; border-color: rgb(70, 60, 46);
+    border-radius: 3px;
+    padding: 6px 12px; margin: 2px 0;
+    -unity-text-align: middle-center;
+}
+.act-icon {
+    width: 60px; height: 58px; margin-left: 6px;
+    background-color: rgb(30, 26, 21);
+    border-width: 1px; border-color: rgb(70, 60, 46);
+    border-radius: 3px;
+    align-items: center; justify-content: center;
+}
+.act-glyph { width: 22px; height: 22px; background-color: rgb(60, 52, 42); border-radius: 2px; margin-bottom: 4px; }
+.act-label { color: rgb(180, 170, 154); font-size: 9px; letter-spacing: 1px; }
+.act-badge { position: absolute; top: 3px; right: 5px; color: rgb(230, 180, 90); font-size: 11px; -unity-font-style: bold; }
+
+/* ================= pie ================= */
+.hint { color: rgb(90, 82, 72); font-size: 11px; -unity-text-align: middle-center; padding: 6px; background-color: rgb(11, 10, 8); }

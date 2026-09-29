@@ -1,0 +1,24 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe",
+            "args": [
+              "-NoProfile",
+              "-ExecutionPolicy",
+              "Bypass",
+              "-File",
+              "E:\\Proyectos Unity\\DD 40k\\.claude\\hooks\\check-terms.ps1"
+            ],
+            "timeout": 20,
+            "statusMessage": "Comprobando nomenclatura VIGILIA"
+          }
+        ]
+      }
+    ]
+  }
+}

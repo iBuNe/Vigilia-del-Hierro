@@ -1,0 +1,33 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+MemoryCaptures/
+Recordings/
+
+# IDE and generated project files
+.vs/
+.idea/
+*.csproj
+*.sln
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.suo
+
+# Playtest and batch output
+PlaytestLogs/
+*.log
+
+# Local Codex/Claude settings and OS files
+.claude/settings.local.json
+.DS_Store
+Thumbs.db
+
+# Unity Cloud Diagnostics
+sysinfo.txt

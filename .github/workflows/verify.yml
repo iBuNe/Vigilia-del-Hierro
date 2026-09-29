@@ -1,0 +1,37 @@
+name: Unity verification
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    name: Generated data and milestone assertions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # The generated ScriptableObjects are committed. The batch method checks
+      # that Library's complete catalogue is available before running the
+      # deterministic gameplay assertions.
+      - name: Run Unity verification
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          unityVersion: 6000.5.4f1
+          targetPlatform: StandaloneLinux64
+          customParameters: >-
+            -nographics
+            -executeMethod Purga.EditorTools.HitoVerification.VerifyBatch
+
+      - name: Upload playtest reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playtest-reports
+          path: PlaytestLogs/
+          if-no-files-found: warn

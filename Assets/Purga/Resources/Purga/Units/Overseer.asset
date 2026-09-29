@@ -1,0 +1,402 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8329149365488967364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714f9c99ade1609468b2663157e9b976, type: 3}
+  m_Name: "Rev\xF3lver de oficial"
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.AbilityDef
+  displayName: "Rev\xF3lver de oficial"
+  usableFrom: 0200000003000000
+  targetPos: 01000000020000000300000004000000
+  targetKind: 0
+  area: 0
+  accuracy: 88
+  dmgMin: 4
+  dmgMax: 8
+  critPct: 8
+  healMin: 0
+  healMax: 0
+  corruptionDelta: 0
+  faithDelta: 0
+  selfFaithDelta: 0
+  isFaithAbility: 0
+  status:
+    kind: 0
+    chance: 100
+    power: 0
+    duration: 0
+  removesBleed: 0
+  ammoCost: 1
+  usesPerCombat: 0
+  requiresMelee: 0
+  blockedInMelee: 0
+  special: 0
+  faithCost: 0
+  warpDanger: 0
+  ignoresArmor: 0
+  isFire: 0
+  cohesionDelta: 0
+  pushesBack: 0
+  bossPhaseOnly: 0
+  areaCorruption: 0
+  ralliesMoral: 0
+--- !u!114 &-5781169588304191701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714f9c99ade1609468b2663157e9b976, type: 3}
+  m_Name: Disparo de advertencia
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.AbilityDef
+  displayName: Disparo de advertencia
+  usableFrom: 0200000003000000
+  targetPos: 01000000020000000300000004000000
+  targetKind: 0
+  area: 0
+  accuracy: 95
+  dmgMin: 1
+  dmgMax: 2
+  critPct: 0
+  healMin: 0
+  healMax: 0
+  corruptionDelta: 0
+  faithDelta: 0
+  selfFaithDelta: 0
+  isFaithAbility: 0
+  status:
+    kind: 3
+    chance: 110
+    power: 0
+    duration: 1
+  removesBleed: 0
+  ammoCost: 1
+  usesPerCombat: 0
+  requiresMelee: 0
+  blockedInMelee: 0
+  special: 0
+  faithCost: 0
+  warpDanger: 0
+  ignoresArmor: 0
+  isFire: 0
+  cohesionDelta: 0
+  pushesBack: 0
+  bossPhaseOnly: 0
+  areaCorruption: 0
+  ralliesMoral: 0
+--- !u!114 &-959704120704267718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714f9c99ade1609468b2663157e9b976, type: 3}
+  m_Name: "\xA1Ni un paso atr\xE1s!"
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.AbilityDef
+  displayName: "\xA1Ni un paso atr\xE1s!"
+  usableFrom: 01000000020000000300000004000000
+  targetPos: 01000000020000000300000004000000
+  targetKind: 3
+  area: 0
+  accuracy: 0
+  dmgMin: 0
+  dmgMax: 0
+  critPct: 0
+  healMin: 0
+  healMax: 0
+  corruptionDelta: 0
+  faithDelta: 0
+  selfFaithDelta: 0
+  isFaithAbility: 0
+  status:
+    kind: 13
+    chance: 100
+    power: 10
+    duration: 2
+  removesBleed: 0
+  ammoCost: 0
+  usesPerCombat: 0
+  requiresMelee: 0
+  blockedInMelee: 0
+  special: 0
+  faithCost: 0
+  warpDanger: 0
+  ignoresArmor: 0
+  isFire: 0
+  cohesionDelta: 0
+  pushesBack: 0
+  bossPhaseOnly: 0
+  areaCorruption: 0
+  ralliesMoral: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4a8cef6a585df49b9989c533e1aa06, type: 3}
+  m_Name: Overseer
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.UnitDef
+  displayName: Oficial
+  team: 0
+  maxHP: 22
+  armor: 1
+  dodge: 12
+  speed: 6
+  corrResist: 40
+  maxAmmo: 6
+  countsForCohesion: 1
+  weakToFire: 0
+  isLeader: 1
+  resBleed: 0
+  resToxin: 0
+  resStun: 0
+  resMove: 0
+  resDebuff: 0
+  deathBlowPct: 33
+  threat: 1
+  usesPromethium: 0
+  isBoss: 0
+  isElite: 0
+  ownCohesion: 0
+  phaseTwoAtPct: 0
+  phaseThreeAtPct: 0
+  phaseTwoLog: 
+  phaseThreeLog: 
+  phaseThreeSummon: 
+  summonType: 
+  summonPerRound: 0
+  summonFromNest: 0
+  dropsMoraleOnDeath: 0
+  isBomber: 0
+  isVip: 0
+  threatChannel: 0
+  devoursCorpses: 0
+  corpseHeal: 8
+  gasOnHit: 0
+  gasOnDeath: 0
+  splitsInto: 
+  extraActionIfUnhit: 0
+  isSapper: 0
+  packLeader: 0
+  isFlayer: 0
+  isDescendido: 0
+  silencesMiracles: 0
+  revivesDescendidos: 0
+  isAutomaton: 0
+  isFauna: 0
+  weakToArea: 0
+  bleedsAttackerOnMelee: 0
+  stealsSupply: 0
+  abilities:
+  - {fileID: -8329149365488967364}
+  - {fileID: 3732905383989254944}
+  - {fileID: -959704120704267718}
+  - {fileID: 4051219621694764092}
+  - {fileID: 1528838183192994518}
+  - {fileID: -5781169588304191701}
+  - {fileID: 8013951551048542122}
+--- !u!114 &1528838183192994518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714f9c99ade1609468b2663157e9b976, type: 3}
+  m_Name: "Se\xF1alar al renegado"
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.AbilityDef
+  displayName: "Se\xF1alar al renegado"
+  usableFrom: 01000000020000000300000004000000
+  targetPos: 01000000020000000300000004000000
+  targetKind: 0
+  area: 0
+  accuracy: 0
+  dmgMin: 0
+  dmgMax: 0
+  critPct: 0
+  healMin: 0
+  healMax: 0
+  corruptionDelta: 0
+  faithDelta: 0
+  selfFaithDelta: 0
+  isFaithAbility: 0
+  status:
+    kind: 15
+    chance: 100
+    power: 20
+    duration: 2
+  removesBleed: 0
+  ammoCost: 0
+  usesPerCombat: 0
+  requiresMelee: 0
+  blockedInMelee: 0
+  special: 0
+  faithCost: 0
+  warpDanger: 0
+  ignoresArmor: 0
+  isFire: 0
+  cohesionDelta: 0
+  pushesBack: 0
+  bossPhaseOnly: 0
+  areaCorruption: 0
+  ralliesMoral: 0
+--- !u!114 &3732905383989254944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714f9c99ade1609468b2663157e9b976, type: 3}
+  m_Name: Sable de oficial
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.AbilityDef
+  displayName: Sable de oficial
+  usableFrom: 0100000002000000
+  targetPos: 0100000002000000
+  targetKind: 0
+  area: 0
+  accuracy: 90
+  dmgMin: 5
+  dmgMax: 9
+  critPct: 6
+  healMin: 0
+  healMax: 0
+  corruptionDelta: 0
+  faithDelta: 0
+  selfFaithDelta: 0
+  isFaithAbility: 0
+  status:
+    kind: 0
+    chance: 100
+    power: 0
+    duration: 0
+  removesBleed: 0
+  ammoCost: 0
+  usesPerCombat: 0
+  requiresMelee: 0
+  blockedInMelee: 0
+  special: 0
+  faithCost: 0
+  warpDanger: 0
+  ignoresArmor: 0
+  isFire: 0
+  cohesionDelta: 0
+  pushesBack: 0
+  bossPhaseOnly: 0
+  areaCorruption: 0
+  ralliesMoral: 0
+--- !u!114 &4051219621694764092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714f9c99ade1609468b2663157e9b976, type: 3}
+  m_Name: "Arenga f\xE9rrea"
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.AbilityDef
+  displayName: "Arenga f\xE9rrea"
+  usableFrom: 01000000020000000300000004000000
+  targetPos: 01000000020000000300000004000000
+  targetKind: 1
+  area: 0
+  accuracy: 0
+  dmgMin: 0
+  dmgMax: 0
+  critPct: 0
+  healMin: 2
+  healMax: 2
+  corruptionDelta: -10
+  faithDelta: 0
+  selfFaithDelta: 0
+  isFaithAbility: 0
+  status:
+    kind: 0
+    chance: 100
+    power: 0
+    duration: 0
+  removesBleed: 0
+  ammoCost: 0
+  usesPerCombat: 0
+  requiresMelee: 0
+  blockedInMelee: 0
+  special: 0
+  faithCost: 0
+  warpDanger: 0
+  ignoresArmor: 0
+  isFire: 0
+  cohesionDelta: 0
+  pushesBack: 0
+  bossPhaseOnly: 0
+  areaCorruption: 0
+  ralliesMoral: 0
+--- !u!114 &8013951551048542122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714f9c99ade1609468b2663157e9b976, type: 3}
+  m_Name: FUSILAR
+  m_EditorClassIdentifier: Assembly-CSharp::Purga.AbilityDef
+  displayName: FUSILAR
+  usableFrom: 01000000020000000300000004000000
+  targetPos: 01000000020000000300000004000000
+  targetKind: 1
+  area: 0
+  accuracy: 0
+  dmgMin: 0
+  dmgMax: 0
+  critPct: 0
+  healMin: 0
+  healMax: 0
+  corruptionDelta: 0
+  faithDelta: 0
+  selfFaithDelta: 0
+  isFaithAbility: 0
+  status:
+    kind: 0
+    chance: 100
+    power: 0
+    duration: 0
+  removesBleed: 0
+  ammoCost: 0
+  usesPerCombat: 0
+  requiresMelee: 0
+  blockedInMelee: 0
+  special: 4
+  faithCost: 0
+  warpDanger: 0
+  ignoresArmor: 0
+  isFire: 0
+  cohesionDelta: 0
+  pushesBack: 0
+  bossPhaseOnly: 0
+  areaCorruption: 0
+  ralliesMoral: 0
